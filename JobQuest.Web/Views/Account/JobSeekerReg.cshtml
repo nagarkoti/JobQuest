@@ -1,0 +1,91 @@
+﻿@model JobQuest.Web.Models.JobSeekerRegModel
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>JobSeeker</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div>
+            @Html.LabelFor(model => model.registerViewModel.UserName)
+
+        </div>
+        <div>
+            @Html.EditorFor(model => model.registerViewModel.UserName)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.registerViewModel.Password)
+
+        </div>
+        <div>
+            @Html.EditorFor(model => model.registerViewModel.Password)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.registerViewModel.ConfirmPassword)
+
+        </div>
+        <div>
+            @Html.EditorFor(model => model.registerViewModel.ConfirmPassword)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jobSeeker.FirstName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.jobSeeker.FirstName)
+                @Html.ValidationMessageFor(model => model.jobSeeker.FirstName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jobSeeker.LastName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.jobSeeker.LastName)
+                @Html.ValidationMessageFor(model => model.jobSeeker.LastName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jobSeeker.Email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.jobSeeker.Email)
+                @Html.ValidationMessageFor(model => model.jobSeeker.Email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jobSeeker.Phone, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.jobSeeker.Phone)
+                @Html.ValidationMessageFor(model => model.jobSeeker.Phone)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jobSeeker.Address, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.jobSeeker.Address)
+                @Html.ValidationMessageFor(model => model.jobSeeker.Address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jobSeeker.DOB, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.jobSeeker.DOB, new { @class = "datepicker", @PlaceHolder = "mm/dd/yyyy" } )
+                @Html.ValidationMessageFor(model => model.jobSeeker.DOB)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+

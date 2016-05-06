@@ -1,0 +1,10 @@
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\JobQuest.Data.dll.config
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\JobQuest.Data.dll
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\JobQuest.Data.pdb
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\EntityFramework.dll
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\EntityFramework.xml
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\obj\Debug\JobQuest.Data.dll
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\obj\Debug\JobQuest.Data.pdb
+F:\CQU MIT\Final Project\JobQuest\JobQuest.Data\obj\Debug\JobQuest.Data.csprojResolveAssemblyReference.cache

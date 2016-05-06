@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobQuestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="JobQuestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="JobQuestModel.C__MigrationHistory" />
+    <EntitySet Name="Admins" EntityType="JobQuestModel.Admin" />
+    <EntitySet Name="Advertisements" EntityType="JobQuestModel.Advertisement" />
+    <EntitySet Name="AspNetRoles" EntityType="JobQuestModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="JobQuestModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="JobQuestModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="JobQuestModel.AspNetUser" />
+    <EntitySet Name="Banners" EntityType="JobQuestModel.Banner" />
+    <EntitySet Name="Categories" EntityType="JobQuestModel.Category" />
+    <EntitySet Name="Documents" EntityType="JobQuestModel.Document" />
+    <EntitySet Name="Invoices" EntityType="JobQuestModel.Invoice" />
+    <EntitySet Name="Jobs" EntityType="JobQuestModel.Job" />
+    <EntitySet Name="JobApplications" EntityType="JobQuestModel.JobApplication" />
+    <EntitySet Name="JobSeekers" EntityType="JobQuestModel.JobSeeker" />
+    <EntitySet Name="Notifications" EntityType="JobQuestModel.Notification" />
+    <EntitySet Name="Payments" EntityType="JobQuestModel.Payment" />
+    <EntitySet Name="Recruiters" EntityType="JobQuestModel.Recruiter" />
+    <AssociationSet Name="FK_Admin_AspNetUsers" Association="JobQuestModel.FK_Admin_AspNetUsers">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Admin" EntitySet="Admins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Advertisement_Payment" Association="JobQuestModel.FK_Advertisement_Payment">
+      <End Role="Payment" EntitySet="Payments" />
+      <End Role="Advertisement" EntitySet="Advertisements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="JobQuestModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="JobQuestModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recruiter_AspNetUsers" Association="JobQuestModel.FK_Recruiter_AspNetUsers">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Recruiter" EntitySet="Recruiters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Banner_Recruiter" Association="JobQuestModel.FK_Banner_Recruiter">
+      <End Role="Recruiter" EntitySet="Recruiters" />
+      <End Role="Banner" EntitySet="Banners" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Category" Association="JobQuestModel.FK_Job_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_JobApplication" Association="JobQuestModel.FK_Document_JobApplication">
+      <End Role="JobApplication" EntitySet="JobApplications" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Payment" Association="JobQuestModel.FK_Invoice_Payment">
+      <End Role="Payment" EntitySet="Payments" />
+      <End Role="Invoice" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Recruiter" Association="JobQuestModel.FK_Job_Recruiter">
+      <End Role="Recruiter" EntitySet="Recruiters" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobApplication_Job" Association="JobQuestModel.FK_JobApplication_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="JobApplication" EntitySet="JobApplications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_Job" Association="JobQuestModel.FK_Notification_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="Notification" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobApplication_JobSeeker" Association="JobQuestModel.FK_JobApplication_JobSeeker">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="JobApplication" EntitySet="JobApplications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_JobApplication" Association="JobQuestModel.FK_Notification_JobApplication">
+      <End Role="JobApplication" EntitySet="JobApplications" />
+      <End Role="Notification" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Recruiter" Association="JobQuestModel.FK_Payment_Recruiter">
+      <End Role="Recruiter" EntitySet="Recruiters" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="JobQuestModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Postion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="JobQuestModel.FK_Admin_AspNetUsers" FromRole="Admin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="Advertisement">
+    <Key>
+      <PropertyRef Name="AdvertisementID" />
+    </Key>
+    <Property Name="AdvertisementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentID" Type="Int32" />
+    <Property Name="IsPublished" Type="Boolean" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Payment" Relationship="JobQuestModel.FK_Advertisement_Payment" FromRole="Advertisement" ToRole="Payment" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="JobQuestModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="User_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="JobQuestModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="JobQuestModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Discriminator" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Admins" Relationship="JobQuestModel.FK_Admin_AspNetUsers" FromRole="AspNetUser" ToRole="Admin" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="JobQuestModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="JobQuestModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="Recruiters" Relationship="JobQuestModel.FK_Recruiter_AspNetUsers" FromRole="AspNetUser" ToRole="Recruiter" />
+    <NavigationProperty Name="AspNetRoles" Relationship="JobQuestModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="BannerID" />
+    </Key>
+    <Property Name="BannerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecruiterID" Type="Int32" />
+    <Property Name="BannerContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsPublished" Type="Boolean" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Recruiter" Relationship="JobQuestModel.FK_Banner_Recruiter" FromRole="Banner" ToRole="Recruiter" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Jobs" Relationship="JobQuestModel.FK_Job_Category" FromRole="Category" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="JobApplication" Relationship="JobQuestModel.FK_Document_JobApplication" FromRole="Document" ToRole="JobApplication" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Payment" Relationship="JobQuestModel.FK_Invoice_Payment" FromRole="Invoice" ToRole="Payment" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecruiterID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="IsPublished" Type="Boolean" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Category" Relationship="JobQuestModel.FK_Job_Category" FromRole="Job" ToRole="Category" />
+    <NavigationProperty Name="Recruiter" Relationship="JobQuestModel.FK_Job_Recruiter" FromRole="Job" ToRole="Recruiter" />
+    <NavigationProperty Name="JobApplications" Relationship="JobQuestModel.FK_JobApplication_Job" FromRole="Job" ToRole="JobApplication" />
+    <NavigationProperty Name="Notifications" Relationship="JobQuestModel.FK_Notification_Job" FromRole="Job" ToRole="Notification" />
+  </EntityType>
+  <EntityType Name="JobApplication">
+    <Key>
+      <PropertyRef Name="JobApplicationID" />
+    </Key>
+    <Property Name="JobApplicationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobID" Type="Int32" Nullable="false" />
+    <Property Name="JobSeekerID" Type="Int32" />
+    <Property Name="AppliedDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Documents" Relationship="JobQuestModel.FK_Document_JobApplication" FromRole="JobApplication" ToRole="Document" />
+    <NavigationProperty Name="Job" Relationship="JobQuestModel.FK_JobApplication_Job" FromRole="JobApplication" ToRole="Job" />
+    <NavigationProperty Name="JobSeeker" Relationship="JobQuestModel.FK_JobApplication_JobSeeker" FromRole="JobApplication" ToRole="JobSeeker" />
+    <NavigationProperty Name="Notifications" Relationship="JobQuestModel.FK_Notification_JobApplication" FromRole="JobApplication" ToRole="Notification" />
+  </EntityType>
+  <EntityType Name="JobSeeker">
+    <Key>
+      <PropertyRef Name="JobSeekerID" />
+    </Key>
+    <Property Name="JobSeekerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="JobApplications" Relationship="JobQuestModel.FK_JobApplication_JobSeeker" FromRole="JobSeeker" ToRole="JobApplication" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobID" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobApplicationID" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="NotificationMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Job" Relationship="JobQuestModel.FK_Notification_Job" FromRole="Notification" ToRole="Job" />
+    <NavigationProperty Name="JobApplication" Relationship="JobQuestModel.FK_Notification_JobApplication" FromRole="Notification" ToRole="JobApplication" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecruiterID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Advertisements" Relationship="JobQuestModel.FK_Advertisement_Payment" FromRole="Payment" ToRole="Advertisement" />
+    <NavigationProperty Name="Invoices" Relationship="JobQuestModel.FK_Invoice_Payment" FromRole="Payment" ToRole="Invoice" />
+    <NavigationProperty Name="Recruiter" Relationship="JobQuestModel.FK_Payment_Recruiter" FromRole="Payment" ToRole="Recruiter" />
+  </EntityType>
+  <EntityType Name="Recruiter">
+    <Key>
+      <PropertyRef Name="RecruiterID" />
+    </Key>
+    <Property Name="RecruiterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="AspNetUser" Relationship="JobQuestModel.FK_Recruiter_AspNetUsers" FromRole="Recruiter" ToRole="AspNetUser" />
+    <NavigationProperty Name="Banners" Relationship="JobQuestModel.FK_Banner_Recruiter" FromRole="Recruiter" ToRole="Banner" />
+    <NavigationProperty Name="Jobs" Relationship="JobQuestModel.FK_Job_Recruiter" FromRole="Recruiter" ToRole="Job" />
+    <NavigationProperty Name="Payments" Relationship="JobQuestModel.FK_Payment_Recruiter" FromRole="Recruiter" ToRole="Payment" />
+  </EntityType>
+  <Association Name="FK_Admin_AspNetUsers">
+    <End Type="JobQuestModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Admin" Role="Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Advertisement_Payment">
+    <End Type="JobQuestModel.Payment" Role="Payment" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Advertisement" Role="Advertisement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="PaymentID" />
+      </Principal>
+      <Dependent Role="Advertisement">
+        <PropertyRef Name="PaymentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+    <End Type="JobQuestModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="JobQuestModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="JobQuestModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="JobQuestModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recruiter_AspNetUsers">
+    <End Type="JobQuestModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+    <End Type="JobQuestModel.Recruiter" Role="Recruiter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Recruiter">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Banner_Recruiter">
+    <End Type="JobQuestModel.Recruiter" Role="Recruiter" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Banner" Role="Banner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiter">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="Banner">
+        <PropertyRef Name="RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Category">
+    <End Type="JobQuestModel.Category" Role="Category" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_JobApplication">
+    <End Type="JobQuestModel.JobApplication" Role="JobApplication" Multiplicity="1" />
+    <End Type="JobQuestModel.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobApplication">
+        <PropertyRef Name="JobApplicationID" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="JobApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Payment">
+    <End Type="JobQuestModel.Payment" Role="Payment" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Invoice" Role="Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="PaymentID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="PaymentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Recruiter">
+    <End Type="JobQuestModel.Recruiter" Role="Recruiter" Multiplicity="1" />
+    <End Type="JobQuestModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiter">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobApplication_Job">
+    <End Type="JobQuestModel.Job" Role="Job" Multiplicity="1" />
+    <End Type="JobQuestModel.JobApplication" Role="JobApplication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="JobApplication">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_Job">
+    <End Type="JobQuestModel.Job" Role="Job" Multiplicity="1" />
+    <End Type="JobQuestModel.Notification" Role="Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobApplication_JobSeeker">
+    <End Type="JobQuestModel.JobSeeker" Role="JobSeeker" Multiplicity="0..1" />
+    <End Type="JobQuestModel.JobApplication" Role="JobApplication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="JobSeekerID" />
+      </Principal>
+      <Dependent Role="JobApplication">
+        <PropertyRef Name="JobSeekerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_JobApplication">
+    <End Type="JobQuestModel.JobApplication" Role="JobApplication" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Notification" Role="Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobApplication">
+        <PropertyRef Name="JobApplicationID" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="JobApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Recruiter">
+    <End Type="JobQuestModel.Recruiter" Role="Recruiter" Multiplicity="0..1" />
+    <End Type="JobQuestModel.Payment" Role="Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiter">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="JobQuestModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="JobQuestModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+</Schema>

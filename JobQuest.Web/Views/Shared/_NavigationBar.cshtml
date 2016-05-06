@@ -1,0 +1,15 @@
+﻿
+<ul class="nav navbar-nav">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Recruiter"))
+        {
+            <li>@Html.ActionLink("Jobs", "ListJob", "Recruiter")</li>
+            <li>@Html.ActionLink("Account", "About", "Home")</li>
+            <li>@Html.ActionLink("Add Job", "CreateJob", "Recruiter")</li>
+        }
+    }
+</ul>

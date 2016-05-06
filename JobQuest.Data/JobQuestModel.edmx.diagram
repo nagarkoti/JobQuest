@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="be246a7e6cd74592809154c68856c974" Name="Diagram1">
+        <EntityTypeShape EntityType="JobQuestModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="JobQuestModel.Admin" Width="1.5" PointX="5.25" PointY="18.625" />
+        <EntityTypeShape EntityType="JobQuestModel.Advertisement" Width="1.5" PointX="9.75" PointY="10.5" />
+        <EntityTypeShape EntityType="JobQuestModel.AspNetRole" Width="1.5" PointX="0.75" PointY="12" />
+        <EntityTypeShape EntityType="JobQuestModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="JobQuestModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="16.125" />
+        <EntityTypeShape EntityType="JobQuestModel.AspNetUser" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="JobQuestModel.Banner" Width="1.5" PointX="7.5" PointY="13.25" />
+        <EntityTypeShape EntityType="JobQuestModel.Category" Width="1.5" PointX="8.25" PointY="16.75" />
+        <EntityTypeShape EntityType="JobQuestModel.Document" Width="1.5" PointX="15" PointY="17.75" />
+        <EntityTypeShape EntityType="JobQuestModel.Invoice" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="JobQuestModel.Job" Width="1.5" PointX="10.5" PointY="13.5" />
+        <EntityTypeShape EntityType="JobQuestModel.JobApplication" Width="1.5" PointX="12.75" PointY="14.25" />
+        <EntityTypeShape EntityType="JobQuestModel.JobSeeker" Width="1.5" PointX="10.5" PointY="19.125" />
+        <EntityTypeShape EntityType="JobQuestModel.Notification" Width="1.5" PointX="15" PointY="14.25" />
+        <EntityTypeShape EntityType="JobQuestModel.Payment" Width="1.5" PointX="7.5" PointY="8.875" />
+        <EntityTypeShape EntityType="JobQuestModel.Recruiter" Width="1.5" PointX="5.25" PointY="9.75" />
+        <AssociationConnector Association="JobQuestModel.FK_Admin_AspNetUsers" />
+        <AssociationConnector Association="JobQuestModel.FK_Advertisement_Payment" />
+        <AssociationConnector Association="JobQuestModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" />
+        <AssociationConnector Association="JobQuestModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="JobQuestModel.FK_Recruiter_AspNetUsers" />
+        <AssociationConnector Association="JobQuestModel.FK_Banner_Recruiter" />
+        <AssociationConnector Association="JobQuestModel.FK_Job_Category" />
+        <AssociationConnector Association="JobQuestModel.FK_Document_JobApplication" />
+        <AssociationConnector Association="JobQuestModel.FK_Invoice_Payment" />
+        <AssociationConnector Association="JobQuestModel.FK_Job_Recruiter" />
+        <AssociationConnector Association="JobQuestModel.FK_JobApplication_Job" />
+        <AssociationConnector Association="JobQuestModel.FK_Notification_Job" />
+        <AssociationConnector Association="JobQuestModel.FK_JobApplication_JobSeeker" />
+        <AssociationConnector Association="JobQuestModel.FK_Notification_JobApplication" />
+        <AssociationConnector Association="JobQuestModel.FK_Payment_Recruiter" />
+        <AssociationConnector Association="JobQuestModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
