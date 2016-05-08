@@ -24,6 +24,8 @@ namespace JobQuest.Web.Controllers
 
             JobSeeker jobseeker = entities.JobSeekers.SingleOrDefault(mo => mo.UserID == userID);
             return View(jobseeker);
+
+
         }
 	}
 }
