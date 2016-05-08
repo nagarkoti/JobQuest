@@ -6,38 +6,119 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/styles.css")
 
 </head>
-
-
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Job Quest", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                @Html.Partial("_NavigationBar")
-                @Html.Partial("_LoginPartial")
+    <div id="banner">
+        <div class="banner_inner">
+            <div class="logo"><img src="Content/images/logo_jobquest.png" width="185" height="100" /></div>
+            <div class="banner_right">
+                <div class="top_corner_menu">
+                    <ul>
+                        <li class="jobseeker"><a href="#">Job Seeker Login</a></li>
+                        <li class="employer_login"><a href="#">Employer Login</a></li>
+                        <li class="find_facebook_icon"><a href="#">Find Us on Facebook</a></li>
+                        <li class="twitter_icon"><a href="#">Fallow us on Twitter</a></li>
+                        <li class="rss_icon"><a href="#">Subscribe to RSS</a></li>
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+                <div class="clean"></div>
+                <div class="verysign_logo"><img src="Content/images/verysign-mastercard.jpg" /></div>
+                <div class="other_add"><img src="Content/images/top-other-logo.jpg" /></div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
+    <!-- Menu-->
+    <div id="menu">
+        <div class="menu_inner">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Post Resume</a></li>
+                <li><a href="#">Employer Account</a></li>
+                <li><a href="#">Search Job</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="clean"></div>
+
+        </div>
+    </div>
+    @RenderBody()
+
+
+
+
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Job Quest", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    @Html.Partial("_NavigationBar")
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
+
+
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="footer_inner">
+            <div class="footer_link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Search Jobs</a></li>
+                    <li><a href="#">Jobseeker Login</a></li>
+                    <li><a href="#">Employer Login </a></li>
+                    <li> <a href="#">Feedback</a></li>
+                    <li><a href="#">Report a Problem</a></li>
+                </ul>
+            </div>
+            <div class="footer_link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Search Jobs</a></li>
+                    <li><a href="#">Jobseeker Login</a></li>
+                    <li><a href="#">Employer Login </a></li>
+                    <li> <a href="#">Feedback</a></li>
+                    <li><a href="#">Report a Problem</a></li>
+                </ul>
+            </div>
+            <div class="support_sec">
+                <b>SUPPORT / HELP</b>
+                <p>246/10, Ambika Marg, Baneshwor, Kathmandu, Nepal.	      </p>
+                <p> P.O Box: 13845, Email: info@merojob.com		    </p>
+                <p>Phone No: +977-1-000000, +977-1-400000 </p>
+            </div>
+            <div class="clean"></div>
+            <div class="copyright">Copyright © 2011 www.companyname all rights reserve. (Best view in Internet Explorer 6.0 or above at 1024 by 768 pixels) </div>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
