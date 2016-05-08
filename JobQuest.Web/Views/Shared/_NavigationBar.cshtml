@@ -1,15 +1,21 @@
 ﻿
-<ul class="nav navbar-nav">
-    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-    <li>@Html.ActionLink("About", "About", "Home")</li>
-    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    @if (User.Identity.IsAuthenticated)
-    {
-        if (User.IsInRole("Recruiter"))
+
+<div class="menu_inner">
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        @if (User.Identity.IsAuthenticated)
         {
-            <li>@Html.ActionLink("Jobs", "ListJob", "Recruiter")</li>
-            <li>@Html.ActionLink("Account", "About", "Home")</li>
-            <li>@Html.ActionLink("Add Job", "CreateJob", "Recruiter")</li>
+            if (User.IsInRole("Recruiter"))
+            {
+                <li>@Html.ActionLink("Jobs", "ListJob", "Recruiter")</li>
+                <li>@Html.ActionLink("Account", "About", "Home")</li>
+                <li>@Html.ActionLink("Add Job", "CreateJob", "Recruiter")</li>
+            }
         }
-    }
-</ul>
+        
+    </ul>
+    <div class="clean"></div>
+
+</div>

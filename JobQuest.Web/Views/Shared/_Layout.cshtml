@@ -12,7 +12,7 @@
 <body>
     <div id="banner">
         <div class="banner_inner">
-            <div class="logo"><img src="Content/images/logo_jobquest.png" width="185" height="100" /></div>
+            <div class="logo"> <img src="~/Content/images/logo_jobquest.png" width="185" height="100" /></div>
             <div class="banner_right">
                 <div class="top_corner_menu">
                     <ul>
@@ -25,62 +25,103 @@
                     <div class="clean"></div>
                 </div>
                 <div class="clean"></div>
-                <div class="verysign_logo"><img src="Content/images/verysign-mastercard.jpg" /></div>
-                <div class="other_add"><img src="Content/images/top-other-logo.jpg" /></div>
+                <div class="verysign_logo"><img src="~/Content/images/verysign-mastercard.jpg" /></div>
+                <div class="other_add"><img src="~/Content/images/top-other-logo.jpg" /></div>
             </div>
         </div>
     </div>
 
     <!-- Menu-->
     <div id="menu">
-        <div class="menu_inner">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Post Resume</a></li>
-                <li><a href="#">Employer Account</a></li>
-                <li><a href="#">Search Job</a></li>
-                <li><a href="#">Advertise</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="clean"></div>
-
-        </div>
+        @Html.Partial("_NavigationBar")
     </div>
-    @RenderBody()
 
+    <div id="mid_body">
 
-
-
-
-
-    @*<div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Job Quest", "Index", "Home", null, new { @class = "navbar-brand" })
+        <div id="leftcol">
+            <div class="like_sec">
+                <div class="logo_small"><img src="~/Content/images/small-logo.jpg" width="80" height="46" /></div>
+                <div class="like_text">
+                    Jobouting.com on	Facebook	<img src="~/Content/images/like-icon.jpg" />
                 </div>
-                <div class="navbar-collapse collapse">
-                    @Html.Partial("_NavigationBar")
-                    @Html.Partial("_LoginPartial")
+                <div class="clean">
+                </div>
+                <div class="like_row"><img src="~/Content/images/facebook-icon.jpg" /> 480 likes. Signup to see what your friends like</div>
+
+            </div>
+            <div class="top_job_sec">
+                <h1>Top Jobs</h1>
+                <div class="job_box1">
+                    <div class="left_img"><img src="~/Content/images/bajaj-logo.jpg" width="92" height="49" /></div>
+                    <div class="text_sec">
+                        <div class="topjob_title1">Bajaj Showroom</div>
+                        Office Secretary (Female)
+                    </div>
+                </div>
+                <div class="job_box2">
+                    <div class="left_img"><img src="~/Content/images/intel-logo.jpg" width="83" height="60" /></div>
+                    <div class="text_sec">
+                        <div class="topjob_title1">Intel</div>
+                        Office Secretary (Female)
+                    </div>
+                </div>
+                <div class="job_box1">
+                    <div class="left_img"><img src="~/Content/images/bajaj-logo.jpg" width="92" height="49" /></div>
+                    <div class="text_sec">
+                        <div class="topjob_title1">Bajaj Showroom</div>
+                        Office Secretary (Female)
+                    </div>
+                </div>
+                <div class="job_box2">
+                    <div class="left_img"><img src="~/Content/images/intel-logo.jpg" width="83" height="60" /></div>
+                    <div class="text_sec">
+                        <div class="topjob_title1">Intel</div>
+                        Office Secretary (Female)
+                    </div>
+                </div>
+                <div class="job_box1">
+                    <div class="left_img"><img src="~/Content/images/bajaj-logo.jpg" width="92" height="49" /></div>
+                    <div class="text_sec">
+                        <div class="topjob_title1">Bajaj Showroom</div>
+                        Office Secretary (Female)
+                    </div>
                 </div>
             </div>
+            <div class="top_job_sec">
+                <h1>Advertisement</h1>
+                <div class="left_adv_sec">
+                    <img src="~/Content/images/add1.jpg" /> <img src="~/Content/images/add2.jpg" /> <img src="~/Content/images/add3.jpg" />
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="employer_box">
+                <div class="employer_title1">Employer</div>
+                <div class="login_here">Login Here</div>
+                <div class="clean"></div>
+
+                <div class="looking_hire">Looking to Hire ?</div>
+                <div class="link1">Post Job | Search Resume | Buy Online | Contact Us</div>
+            </div>
+            <div class="jobseeker_box">
+                <div class="job_seeker_title">Job Seeker</div>
+                <div class="login_here">Login Here</div>
+                <div class="clean"></div>
+                <div class="double_text">Double your changes of getting the right job</div>
+                <div class="submit_resume"><img src="~/Content/images/submit-resume.jpg" /></div>
+                <div class="new_user"><a href="#">New User ?</a> <span class="reg_here"><a href="#">Register Here</a></span></div>
+            </div>
+            <div class="clean"></div>
         </div>
-        <div class="container body-content">
+        <div id="rightcol">
             @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </footer>
-        </div>*@
+            <div class="clean"></div>
+        </div>
+        <div class="clean"></div>
+       
+    </div>
+    <div class="clean"></div>
 
-
+   
 
     <!--Footer-->
     <div id="footer">
