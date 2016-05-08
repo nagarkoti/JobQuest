@@ -1,0 +1,58 @@
+﻿@model JobQuest.Web.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="http://www.phpjabbers.com/job-listing-script/" id="logo" target="_blank"><img src="http://demo.phpjabbers.com/source/jpw/admin/app/web/img/backend/logo.png" alt=""></a>
+        </div>
+        <div id="middle">
+            <div id="login-content">
+                <div class="login-box">
+
+                    <h3>Admin Login</h3>
+
+                    
+                       
+                       @using (Html.BeginForm("Login", "Admin",FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+
+                         <input type="hidden" name="login_user" value="1">
+                        <p>
+                            <label class="title">Email:</label>
+                            <span class="pj-form-field-custom pj-form-field-custom-before">
+                                <span class="pj-form-field-before"><abbr class="pj-form-field-icon-email"></abbr></span>
+                              @Html.TextBoxFor(model=>model.UserName)
+                                  
+                            </span>
+                        </p>
+                        <p>
+                            <label class="title">Password:</label>
+                            <span class="pj-form-field-custom pj-form-field-custom-before">
+                                <span class="pj-form-field-before"><abbr class="pj-form-field-icon-password"></abbr></span>
+                                @Html.TextBoxFor(model => model.Password)
+                            </span>
+                        </p>
+                        <p>
+                            <label class="title">&nbsp;</label>
+                            <input type="submit" value="Admin/Login" class="pj-button float_left">
+                            <a class="no-decor l10 block float_left r10 t5" href="http://demo.phpjabbers.com/source/jpw/admin/index.php?controller=pjAdmin&amp;action=pjActionForgot">Forgot password</a>
+                            <span class="no-decor block float_left r10 t5">|</span>
+                            <a class="no-decor l10 block  t5" href="http://demo.phpjabbers.com/source/jpw/admin/index.php?controller=pjAdmin&amp;action=pjActionEmployerLogin">Employer login</a>
+                        </p>
+                       }
+                </div>
+            </div>
+        </div> <!-- middle -->
+    </div>
+</body>
+</html>
