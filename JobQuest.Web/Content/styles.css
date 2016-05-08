@@ -1,0 +1,756 @@
+﻿body {
+}
+/* CSS Document */
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																			/*	reset css  */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+
+ html, body, div, span, applet, object, iframe,  
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+ a, abbr, acronym, address, big, cite, code,  
+ del, dfn, em, font, img, ins, kbd, q, s, samp,  
+ small, strike, sub, sup, tt, var,  
+ dl, dt, dd, ol, ul, li,  
+ fieldset, form, label, legend,  
+ table, caption, tbody, tfoot, thead, tr, th, td {  
+     margin: 0;  
+     padding: 0;  
+     border: 0;  
+     outline: 0;  
+     font-weight: inherit;  
+     font-style: inherit;  
+     vertical-align: baselinebaseline; 	  
+ }  
+html {
+      background : url(null) fixed no-repeat;
+     }
+ 
+ 
+img{
+	border:none;
+	}
+img { behavior: url(iepngfix.htc); }
+	
+h1, h2, h3, h4, h5, h6{
+	margin:0;	padding:0;
+	}
+form{
+	margin:0;	padding:0;
+	}
+.clean{
+	clear:both;
+	}	
+a, a:link, a:active, a:visited{
+	color:#4d4d4d;
+	text-decoration:none;
+	}
+a:hover{
+	color:#157bb9;
+	text-decoration:none;
+	}	
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																			/*	general  */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+
+body{
+	padding:0;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	background: url(../Content/images/texture-bg.png) repeat;
+	color:#4d4d4d;
+	font-size:11px;
+	line-height:16px;
+	}
+#container{
+	width:1000px;
+	margin:0 auto;
+	display:table;
+	}
+#banner{
+ 	width:100%; background:#fff; height:115px;	
+	}	
+#banner .banner_inner{
+	width:1000px; margin:0 auto;
+	}
+.logo{
+	width:185px; float:left; margin-top:7px;
+	}
+.banner_right{
+	width:650px; float:right; margin-top:8px;
+	}
+				
+.verysign_logo{
+	width:200px; float: left;
+	}
+.other_add{
+	width:360px; float:right;
+	}	
+		
+#menu{
+	width:100%; background: url(../Content/images/menu-bg.jpg) repeat-x; height:37px;
+	}	
+#menu .menu_inner{
+	width:1000px; margin:0 auto;
+	}	
+#menu .menu_inner ul{
+	width:960px; float:left; padding:0; margin:0; list-style-type:none; margin-left:40px;
+	}
+#menu .menu_inner ul li{
+	color:fff; display:inline; float:left;
+	}
+#menu .menu_inner ul li a{
+	text-decoration:none; background:url(../Content/images/menu-separetor.jpg) right no-repeat; color:#fff; font-size:13px; line-height:37px; padding:0px 22px;
+ display:block;
+	}
+#menu .menu_inner ul li a{
+	text-decoration:none; color:#fff;
+	}
+.hot_jobs{
+	width:158px; float:right; height:32px; margin-top:3px;
+	}	
+#mid_body{
+	width:1000px; margin:0 auto; background:url(../Content/images/body-bg.png) center repeat-y; display:table; padding-bottom:8px;
+	}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																			/*	 left section css  */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+	
+#leftcol{
+	width:280px; float:left; margin-top:20px; display:table;
+	}	
+.search_sec{
+	width:100%; display:table; margin-bottom:18px;	
+	}
+#leftcol h1{
+	background: url(../Content/images/title-tag1.png) no-repeat; width:200px; height:20px; padding-left:40px; padding: 6px 10px 10px 40px; color:#f7f7f7; font-weight:bold; font-size:14px; margin-bottom:8px;
+	}
+.search_sec form{
+	width:230px; margin-left:30px; border-bottom:1px solid #d1d1d1; padding:0px 10px 10px 10px;
+	}	
+.search_sec form label{
+	width:220px; padding-left:6px;
+	}		
+.search_textfield{
+	border:1px solid #e5e5e5; width:210px; height:18px; padding:2px 7px; background:#fff; margin:6px 0px;	
+	}	
+.search_textfield input{	
+	width:210px; height:18px; border:none; background:none;
+	}
+.select{
+	width:140px; float:right; height:22px; border:1px solid #5e5e5; background:#fff; margin:6px 5px 6px 0px;
+	} 
+.select select{
+	width:140px; height:22px; border:none; background:none;
+	}
+.select_state{
+	width:70px;	float:left; margin-top:10px; margin-left:6px;
+	}	
+.search_textfield select{
+	width:210px; height:18px; border:none; background:none;
+	}	
+.search_now_btn{
+	width:84px; height:28px; float:right; margin-top:4px; margin-right:2px;
+	}	
+.job_box1{
+	width:248px; height:82px; background:url(../Content/images/leftbox-bg.jpg) repeat; border-bottom:1px solid #d1d1d1; border-top:1px solid #d1d1d1; margin-left:31px; margin-bottom:6px;
+	}
+.job_box2{
+	width:248px; height:82px; background: url(../Content/images/leftbox2-bg.jpg) repeat-x; margin-left:31px;  margin-bottom:8px;
+	}
+.left_img{
+	width:90px; height:62px; text-align:center; line-height:76px; float:left; background:url(../Content/images/box-seperator.jpg) right no-repeat;
+	padding:5px 10px 5px 0; margin-top:6px;
+	}
+.text_sec{
+	width:125px; float:right; margin:10px 10px 10px 0px;
+	}
+.topjob_title1{
+	font-size:13px; font-weight:bold; color:#3e4850;
+	} 	
+.left_adv_sec{
+	width:248px; margin-left:31px;  text-align:center;
+	}
+.add_title{
+	color:#0361aa; font-weight:bold; font-size:14px; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid #bebebe;
+	}
+.left_adv_sec img{
+	margin-bottom:6px;
+	}		
+.top_job_sec{
+	width:100%; display:table; margin-bottom:10px;	
+	}
+	
+	
+	
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																		/*	 right section css   */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+	
+	
+#rightcol{
+	width:700px; float:right; margin-top:25px;
+	}	
+.apply_banner{ width:700px; margin-bottom:6px;
+	}	
+.job_detail_sec{
+	width:693px; display:table; margin-bottom:12px;
+	}	
+	
+.job_detail_top{
+	background: url(../Content/images/box-top.jpg) top no-repeat; width:692px; height:32px;
+	}
+.job_detail_bg{
+	border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; width:690px; display:table; background:#fff;
+}	
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{ .job_detail_bg{ width:692px; } }	/* this is hack for google chrome 
+
+
+
+@media all and (min-width:0px) {head~body .job_detail_bg {width:690px;}} /* this is hack for opera */	
+
+.job_detail_btm{
+	background:url(../Content/images/box-footer.jpg) bottom left no-repeat; width:692px; height:15px;
+	}
+.job_row{
+	width:320px; border:1px solid #e5e5e5; float:left; margin-left:5px; height:32px; padding:6px 8px; margin-bottom:6px; display:inline;
+	}
+.company_name{
+	width:200px; float:left; margin-right:8px;
+	}
+.day_left{
+	width:65px; float:left; color:#FF0000; margin-top:8px;
+	}	
+.apply{
+	width:40px; float:right; color:#3e4850; margin-top:8px;
+	}	
+.company{
+	color:#3b444b; font-size:11px;
+	}
+.post{
+	color:#0361aa; font-size:11px;
+	}		
+
+.desc_menu{
+	width:600px; height:26px; margin-left:20px;	float:left;
+	}
+@media all and (min-width:0px) {head~body .desc_menu { margin-bottom:5px;}} /* this is hack for opera */	
+body:nth-of-type(1) .desc_menu{ margin-bottom:0px;} /* hack for google chrome */
+	
+.desc_menu ul{
+  list-style:none; padding:0px; margin:0px;
+  }	
+.desc_menu ul li{
+ display:inline;
+ }  
+.desc_menu li{
+	width:135px; float:left; display:block; text-align:center; color:#3b444b; height:26px; line-height:26px;  margin-left:2px;  font-size:12px; background:url(../Content/images/tab-active.jpg) no-repeat;
+  }
+.desc_menu li a, .desc_menu li a:link, .desc_menu li a:active, .desc_menu li a:visited{
+	height:26px; text-decoration:none; display:block; text-align:center; line-height:26px; width:135px; color:#4d4d4d;
+  }
+.desc_menu li a:hover{
+	background:url(../Content/images/tab-hover1.jpg) no-repeat;
+	color:#fff;
+	text-decoration:none;
+	}
+.desc_menu .selected a{
+	background:url(../Content/images/tab-hover1.jpg) no-repeat;
+	color:#fff;
+	text-decoration:none;
+	}
+.page_num{
+	width:400px; float:left; color:#3b444b; margin-left:10px;
+	}	
+.page_num ul{
+	padding:0; margin:0; list-style-type:none;
+	}
+.page_text{
+	width:35px; float:left; margin-right:10px;
+	}	
+.page_num ul li{
+	display:inline;
+	}	
+.page_num ul li a{
+	color:#3b444b; font-size:11px; font-weight:bold; float:left; margin-right:10px; text-decoration:none; width:16px; height:16px; 
+	}
+.page_num ul li a:hover{
+	background: url(../Content/images/num-hover.jpg) no-repeat; display:block; text-align:center; line-height:16px; color:#fff; 
+	}
+	
+.job_cat_sec{
+	width:484px; float:left; display:table; margin-bottom:10px;
+	}
+.job_cat_top{
+	width:484px;  height:25px; background:url(../Content/images/category-top.jpg) no-repeat top;
+	} 
+.job_cat_bg{
+	width:484px; background: url(../Content/images/category-bg.jpg) repeat-y;
+	}	
+.job_cat_btm{
+	width:484px; background:url(../Content/images/category-bottom.jpg) no-repeat; height:18px;
+	} 		
+.cat_link{
+	width:215px; float: left; background: url(../Content/images/leftlink-bg.jpg) right no-repeat; padding:0px 20px 0px 15px;
+	}		
+.cat_link ul{
+	padding:0; margin:0; list-style-type:none; 
+		}
+.cat_link ul li{
+	float:left; width:215px;  padding:0px 0px 5px; 
+	}	
+.cat_link ul li a, .cat_link ul li a:link, .cat_link ul li a:active,.cat_link ul li a:visited{
+	color:#0361aa; font-size:11px; text-decoration:none;
+	}	
+.cat_link ul li a:hover{
+	color:#444e56; text-decoration:none; 
+	}		
+.cat_link_right{
+	width:210px; float: right; margin-right:10px; 
+	}		
+.cat_link_right ul{
+	padding:0; margin:0; list-style-type:none; 
+		}
+.cat_link_right ul li{
+	float:left; width:210px;  padding:0px 0px 5px; 
+	}	
+.cat_link_right ul li a, .cat_link_right ul li a:link, .cat_link_right ul li a:active, .cat_link_right ul li a:visited{
+	color:#0361aa; font-size:11px; text-decoration:none;
+	}	
+.cat_link_right ul li a:hover{
+	color:#444e56; text-decoration:none; 
+	}		
+	
+.add-google_box{
+	width:205px; float:right; margin-right:5px; margin-bottom:10px;
+	}	
+.add_google_top{
+	width:205px; background:url(../Content/images/add-google-top.jpg) top no-repeat; height:28px;
+	} 	
+.add_google_bg{
+	width:181px; background:url(../Content/images/add-google-bg.jpg) repeat-y; padding:0 12px; display:table;
+	}
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{ .add_google_bg{ width:211px; } }	
+	
+.add_google_btm{
+	width:205px; background:url(../Content/images/add-google-btm.jpg) bottom no-repeat; height:12px;
+	}	
+.add_google_title{
+	color:#000000; font-size:12px; width:100px; float:left; margin-bottom:10px;
+	}
+.left_right_icon{
+	width:50px; float:right; margin-bottom:10px;
+	}	
+		 	
+.left_right_icon img{
+	margin-left:6px;
+	}
+.google_add_title1{
+	color:#3d5aea; font-size:12px; margin-bottom:6px;	
+	}	
+.google_add_title1 a, .google_add_title1 a:link, .google_add_title1 a:active, .google_add_title1 a:visited{
+	color:#3d5aea; text-decoration:underline;
+	}
+.google_add_title1 a:hover{
+	color:#4d4d4d; text-decoration:underline;
+	}	
+.add_link{
+	color:#15bf04; margin-bottom:10px; font-size:10px;  
+	}	
+.top_employer_box{
+	width:228px; display:table; float:left; margin-bottom:6px;
+	}
+.top_employer_box_top{
+	border-bottom:1px solid #e9e8e8; background:url(../Content/images/top-employer-top.jpg) top no-repeat; color:#3b444b; font-size:12px; padding: 8px 15px 0px 15px; 
+	width:198px; height:20px;
+	}	
+.top_employer_box_bg{
+	background:url(../Content/images/top-employer-box-bg.jpg) repeat-y; display:table; width:212px; padding:10px 8px 0px 8px;
+	}
+.top_employer_box_btm{
+	width:228px; background:url(../Content/images/top-employer-btm.jpg) bottom no-repeat; height:14px;
+	}	
+.resource{
+	width:458px; float:right; height:100px; background:#000000;
+	}	
+.resource_box{
+	width:458px; float:right; display:table;
+	}
+.resource_top{
+	width:428px; height:20px; background:url(../Content/images/resource-top.jpg) no-repeat; padding:8px 15px 0px 15px; border-bottom:1px solid #e9e8e8; font-size:12px;
+	} 	
+.resource_bg{
+	background:url(../Content/images/resource-bg.jpg) repeat-y; width:438px; padding:8px 10px 0px 10px;
+	}
+.resource_btm{
+	width:458px; background:url(../Content/images/resource-btm.jpg) bottom no-repeat; height:12px;
+	}	 
+.resource_bg img{
+	margin-right:10px; float:left;
+	}	
+.read_more{
+	color:#0073a6; font-size:11px; margin-left:15px;
+	}	
+.read_more a, .read_more a:link, .read_more a:active, .read_more a:visited{
+	color:#0073a6; text-decoration:none;
+	}	
+.read_more a:hover{
+	color:#4d4d4d; text-decoration:none;
+	}		
+	
+	
+	
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																		/*	 footer css   */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+					
+
+
+#footer{
+	width:100%;	height:190px; background:url(../Content/images/footer-bg.jpg) repeat-x; padding:20px 0px 0px 0px; 
+	}
+.footer_inner{
+	width:960px; margin:0 auto;
+	}	
+.footer_link{
+	width:235px; float:left; margin-right:30px; background: url(../Content/images/footer_seperator.jpg) right no-repeat; margin-left:25px; display:inline;			
+	}
+.footer_link ul{
+	padding:0; margin:0; list-style-type:none;
+	}
+.footer_link ul li{
+	width:240px; color:#bababa; line-height:22px; padding-left:0px; list-style-image: url(../Content/images/icon1.jpg);
+	}
+.footer_link ul li a, .footer_link ul li a:link, .footer_link ul li a:visited, .footer_link ul li a:active{
+	color:#bababa; text-decoration:none;
+	}
+.footer_link ul li a:hover{
+	color:#fff; text-decoration:none;
+	}	
+.support_sec{
+	width:350px; float:left; color:#bababa; line-height:20px; margin-top:15px;
+	}
+.support_sec b{
+	color:#fff; font-weight:bold; font-size:12px; line-height:25px; 
+	}
+.copyright{
+	background:url(../Content/images/footer-shade.jpg) bottom no-repeat; width:960px; margin:0 auto; padding:15px 0px; height:18px; text-align:center; color:#dcdcdc; 
+	margin-top:10px;
+	}
+	
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																		/*	  inner section css   */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+		
+	
+.topline{
+	width:630px; margin:0 auto; margin-bottom:20px;
+	}		
+.topline ul{
+	padding:0; margin:0; 
+	}
+.topline ul li{	
+	display:inline; margin-right:10px;
+	}
+	
+.topline ul li a, .topline ul li a:link, .topline ul li a:active, .topline ul li a:visited{
+	color:#4d4d4d; text-decoration:none;
+	}	
+.topline ul li a:hover{
+	color:#4d4d4d; text-decoration:none;
+	}		
+	
+.like_image{
+	background: url(../Content/images/like-icon-box.jpg) no-repeat; width:65px; height:16px; float:left; display:block; padding:6px 10px 6px 35px; display:block;
+	}
+.send_image{
+	background:url(../Content/images/send-icon.jpg) no-repeat; width:35px; height:15px; float:left; padding:6px 5px 6px 30px;
+	}
+.facebook_icon{
+	width:270px; float:left; background:url(../Content/images/facebook-icon.jpg) left no-repeat; padding-left:25px; margin-top:5px; font-size:10px;
+	}	
+.view_image{
+	width:112px; height:27px; float:right; background:url(../Content/images/view-icon.jpg) no-repeat; text-align:center; line-height:27px;
+	}	
+.view_num{
+	color:#447bbe; font-weight:bold; font-size:12px;
+	}	
+.add_img{
+	width:575px; margin:0 auto; margin-bottom:20px;	
+	}
+.detail_sec{
+	margin-bottom:15px; width:660px; margin:0 auto;
+	}	
+.detail_sec h2{
+	color:#157bb9; font-weight:bold; font-size:12px; border-bottom:1px dotted #ccc; padding-bottom:5px; padding-left:10px;  margin-bottom:18px;
+	}	
+.detail_sec h3{
+	color:#4d4d4d; font-weight:bold; font-size:16px; margin-bottom:12px;
+	}	
+	
+.detail_row{
+	margin-bottom:4px; 
+	}	
+.detail_row .detail_left_text{
+	width:240px; float:left; margin-right:20px; padding-left:8px;
+	}	
+.detail_row .detail_right_text{
+	width:390px; float:left; 
+	}	
+.margin_top{
+	margin-top:25px;
+	}
+		
+detail_sec ul{
+	padding:0; margin:0; 
+	}
+.detail_sec ul li{	
+	list-style-image: url(../Content/images/icon2.jpg); line-height:20px; margin-left:20px;
+	}	
+	
+.detail_sec h4{
+	color:#4d4d4d; font-weight:bold; font-size:12px; padding-left:10px;  margin-bottom:18px; height:22px; line-height:22px; background:	#eeefeb; margin-top:25px;
+	}	
+.apply_row{
+	color:#4d4d4d; font-size:11px; background:url(../Content/images/cross-sign.jpg) left no-repeat; padding-left:40px; width:500px;  margin:8px 0px 0px 0px;
+	}	
+.apply_row1{
+	color:#4d4d4d; font-size:11px; background:url(../Content/images/correct-sign.jpg) left no-repeat; padding-left:40px; width:500px; margin:8px 0px 0px 0px;
+	}	
+.send_btns{
+	width:600px; text-align:center; margin:20px auto;
+	}	
+.send_btns img{
+	margin-right:6px;
+	}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+																		/*	 job search sec   */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
+	
+
+.detail_sec	p{
+	margin:0; padding:0px; margin-bottom:10px; padding-left:10px;
+	}
+.job_search_sec{
+	width:600px; padding:20px; background:#f6f6f6; border:1px solid #eee; margin:0 auto; display:table; margin-bottom:10px;
+	}	
+.search_row{ 
+	margin-bottom:10px; width:600px; line-height:20px;
+	}
+.search_row label{	
+	width:125px; float:left; margin-right:10px; display:block;
+	} 	
+.select1{
+	width:280px; height:20px; float:left;
+	}	
+.select2{
+	width:80px; height:22px; float:left;
+	}		
+.input1{
+	width:276px; height:16px; float:left;
+	}	
+.input2{
+	width:80px; height:16px; float:left; margin-right:6px;
+	}	
+.text{
+	width:18px; height:20px; float:left; text-align:center; margin-right:6px; 
+	}	
+.keyword_text{
+	width:480px; float:left; margin-left:120px;
+	}
+.select3{
+	width:40px; height:22px; float:left; margin-right:10px;
+	}		
+.go_search{
+	width:106px; height:28px; float:left; margin-left:130px;	
+	}
+.check_area{
+	width:450px; float:left; line-height:20px;
+	}	
+.check_area input{
+	float:left; margin-right:10px;
+	}	
+.login_btn{
+	width:74px; height:28px; float:left; margin-left:120px;	
+	}	
+.forgot_password{
+	color:#157bb9; font-weight:bold; float:left; width:200px; margin:5px 0px 10px 10px;	 
+	}
+.forgot_password a, .forgot_password a:link, .forgot_password a:visited, .forgot_password a:active{
+	color:#157bb9; text-decoration:none;
+	}	
+.forgot_password a:hover{
+	color:#157bb9; text-decoration:none;
+	}		
+.create_ac{
+	width:168px; float:left; height:28px; margin-left:120px; margin-top:8px;
+	}	
+
+/* 1-3-2068 */
+
+.top_corner_menu{
+	width:620px; margin-bottom:25px; text-align:left; float:right; 
+	}
+
+.top_corner_menu ul{
+	padding:0; margin:0; 
+	}	
+.top_corner_menu ul li{
+	list-style-type:none; display:inline;	
+	}	
+.top_corner_menu ul li a{
+	display:block; padding-left:20px; color:#4d4d4d; text-decoration:none; margin-right:15px; float:left; 
+	}	
+.top_corner_menu ul li a:hover{
+	color:#0361aa; text-decoration:none; 
+	}	
+
+.jobseeker a{
+	background:url(../Content/images/job-seeker-icon.jpg) left no-repeat;
+	}
+.employer_login a{
+	background:url(../Content/images/employer-login-icon.jpg) left no-repeat; 
+	}
+.find_facebook_icon a{
+	background:url(../Content/images/f-icon.jpg) left no-repeat;
+	}		
+.twitter_icon a{
+	background:url(../Content/images/t-icon.jpg) left no-repeat;
+	}	
+.rss_icon a{
+	background: url(../Content/images/rss-icon.jpg) left no-repeat;
+	}	
+.like_sec{
+	margin-bottom:10px; margin-left:38px;
+	}	
+.logo_small{
+	float:left; width:80px; float:left; border-right:1px solid #ccc; padding-right:5px;  
+	}	
+.like_text{
+	width:140px; float:right; margin-right:6px; line-height:24px;
+	}
+.like_text img{
+	float:left; margin-right:10px;
+	}		
+.like_row{
+	width:230px; margin-top:10px;
+	}	
+.employer_box{
+	width:216px; height:100px; margin:0px 0px 10px 35px; background:url(../Content/images/employer-box.jpg) left no-repeat; padding:10px; 
+	}	
+.employer_title1{
+	font-weight:bold; font-size:15px; color:#045495; width:90px; float:left;
+	}	
+.login_here{
+	width:70px; float:right; color:#ffff00; font-weight:bold; text-align:right; text-decoration:underline;
+	}
+.looking_hire{
+	font-size:14px; font-weight:bold; color:#ffff00; margin:12px 0px; 
+	}		
+.link1{
+	font-size:11px; color:#fff;
+	}
+.link1 a, .link1 a:link, .link1 a:active, .link1 a:visited{
+	color:#fff; text-decoration:none;
+	}		
+.link1 a:hover{
+	color:#fff; text-decoration:none;
+	}	
+		
+.jobseeker_box{
+	width:208px; height:146px; background:url(../Content/images/job-seeker-box.jpg) no-repeat; margin-left:35px; padding:10px 15px;
+	}	
+.job_seeker_title{
+	color:#fff; font-weight:bold; font-size:14px; width:100px; float:left;
+	}	
+.job_seeker_title{
+	color:#fff; font-weight:bold; font-size:14px; width:100px; float:left;
+	}	
+.double_text{
+	width:150px; margin:0 auto; margin-top:25px; color:#4d4d4d; text-align:center;	
+	}
+.submit_resume{
+	width:126px; height:28px; margin:10px auto; 
+	}	
+.new_user{
+	color:#4d4d4d; font-weight:bold; margin-left:15px;
+	}	
+.new_user a, .new_user a:link, .new_user a:visited, .new_user a:active{
+	color:#4d4d4d; text-decoration:none;
+	}		
+.new_user a:hover{
+	color:#0864ad; text-decoration:none;
+	}
+.reg_here{
+	color:#0864ad; font-weight:bold; margin-left:15px;
+	}	
+.reg_here a, .reg_here a:link, .reg_here a:visited, .reg_here a:active{
+	color:#0864ad; text-decoration:none;
+	}		
+.reg_here a:hover{
+	color:#4d4d4d; text-decoration:none;
+	}			
+	
+.job_detail_bg h3{
+	color:#0361aa; font-weight:bold; font-size:13px; border-bottom:1px solid #eee; padding-bottom:6px; margin:0px 15px 10px 15px; 
+	}
+.hot_Content/images_sec{
+	width:660px; margin:0 auto;
+	}	
+.hot_Content/images_sec  img{
+	margin:0px 7px 12px 7px;
+	} 	
+
+/*	 6-3-2068   */	
+.job_search_sec form fieldset {
+	margin-bottom:10px; 
+	}	
+.job_search_sec form fieldset legend{
+	color:#157bb9; font-weight:bold; margin-bottom:15px; font-size:12px; border-bottom:1px dotted #ccc; padding-bottom:6px; width:600px;	
+	}	
+.select3{
+	width:50px; height:22px; float:left;
+	}	
+select{
+	float:left; height:22px; margin-right:10px;
+	}		
+.float_left{
+	float:left;
+	}	
+.float_right{
+	float:right;
+	}	
+.error{
+	color:#FF0000; width:180px; margin-bottom:10px; margin-left:135px; 
+	}	
+.textarea1{
+	width:270px; height:100px;
+	}	
+.radio_row{
+	width:90px; float:left; margin-right:10px;
+	}
+	
+.blue_text{
+	color:#157bb9;	
+	}
+.blue_text a, .blue_text a:link, .blue_text a:active, .blue_text a:visited{
+	color:#157bb9; text-decoration:none;	
+	}
+.blue_text a:hover{
+	color:#4d4d4d; text-decoration:underline;	
+	}	
+.i_accept{
+	width:184px; height:28px; float:left; margin-left:130px;	
+	}	
+.ok_btn{
+	width:38px; height:26px; float:left; margin-left:130px;	
+	}	
+.cancel_btn{
+	width:84px; height:26px; float:left; margin-left:8px;	
+	}		
