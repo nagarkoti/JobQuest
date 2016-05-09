@@ -95,7 +95,7 @@ namespace JobQuest.Web.Controllers
             return View(recruiterRegModel);
         }
 
-         [AllowAnonymous]
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> RecruiterReg(RecruiterRegModel recruiterRegModel)
         {      
