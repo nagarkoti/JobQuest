@@ -1,27 +1,13 @@
-﻿body {
-}
 /* CSS Document */
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
 																			/*	reset css  */
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
 
- html, body, div, span, applet, object, iframe,  
- h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
- a, abbr, acronym, address, big, cite, code,  
- del, dfn, em, font, img, ins, kbd, q, s, samp,  
- small, strike, sub, sup, tt, var,  
- dl, dt, dd, ol, ul, li,  
- fieldset, form, label, legend,  
- table, caption, tbody, tfoot, thead, tr, th, td {  
-     margin: 0;  
-     padding: 0;  
-     border: 0;  
-     outline: 0;  
-     font-weight: inherit;  
-     font-style: inherit;  
-     vertical-align: baselinebaseline; 	  
- }  
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+ 	 {  
+     margin: 0; padding: 0;  border: 0;  outline: 0;  font-weight: inherit;  font-style: inherit; vertical-align: baselinebaseline;
+	  }  
 html {
       background : url(null) fixed no-repeat;
      }
@@ -42,12 +28,10 @@ form{
 	clear:both;
 	}	
 a, a:link, a:active, a:visited{
-	color:#4d4d4d;
-	text-decoration:none;
+	color:#4d4d4d; text-decoration:none;
 	}
 a:hover{
-	color:#157bb9;
-	text-decoration:none;
+	color:#157bb9; text-decoration:none;
 	}	
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
@@ -55,18 +39,10 @@ a:hover{
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/  	
 
 body{
-	padding:0;
-	margin:0;
-	font-family:Arial, Helvetica, sans-serif;
-	background: url(../Content/images/texture-bg.png) repeat;
-	color:#4d4d4d;
-	font-size:11px;
-	line-height:16px;
+	padding:0;	margin:0; font-family:Arial, Helvetica, sans-serif;	background: url(../Content/images/texture-bg.png) repeat; color:#4d4d4d; font-size:11px; line-height:16px;
 	}
 #container{
-	width:1000px;
-	margin:0 auto;
-	display:table;
+	width:1000px; margin:0 auto; display:table;
 	}
 #banner{
  	width:100%; background:#fff; height:115px;	
@@ -194,7 +170,7 @@ body{
 #rightcol{
 	width:700px; float:right; margin-top:25px;
 	}	
-.apply_banner{ width:700px; margin-bottom:6px;
+.apply_banner{ width:700px; margin-bottom:15px; height:200px; 
 	}	
 .job_detail_sec{
 	width:693px; display:table; margin-bottom:12px;
@@ -754,3 +730,77 @@ select{
 .cancel_btn{
 	width:84px; height:26px; float:left; margin-left:8px;	
 	}		
+
+.upload_logo{
+	width:235px; height:242px;
+	}	
+
+/* left nav */
+.left_nav{
+	width:238px; margin-left:40px;
+	}
+.left_nav ul{
+	padding:0; margin:0;
+	}	
+.left_nav ul li{
+	list-style-type:none; display:block;
+	}		
+.left_nav ul li a{
+	display:block; padding-left:30px; color:#4d4d4d; text-decoration:none; margin-right:15px; line-height:25px; font-size:12px; margin-bottom:6px;
+	background:url(../Content/images/line1.jpg) bottom no-repeat; padding-bottom:4px;
+	}	
+.left_nav ul li a:hover{
+	color:#cc0000; text-decoration:none; 
+	}	
+.job_post{
+	background:url(../Content/images/post-job.jpg) left no-repeat;	
+	}
+.view_postjob{
+	background:url(../Content/images/view-posted-job.jpg) left no-repeat;
+	}	
+.postjob{
+	background:url(../Content/images/post-job.jpg) left no-repeat;
+	}	
+	
+.auto_responder{
+	background:url(../Content/images/auto-responder.jpg) left no-repeat;
+	}	
+.shorting{
+	background:url(../Content/images/shorting-icon.jpg) left no-repeat;
+	}	
+.view_shortlisted{
+	background:url(../Content/images/view-shortlisted.jpg) left no-repeat;
+	}	
+.view_flag{
+	background:url(../Content/images/flag-icon.jpg) left no-repeat;
+	}	
+.dashboard{
+	background:url(../Content/images/dashboard-icon.jpg) left no-repeat;
+	}		
+.view_profile{
+	background:url(../Content/images/view-profile.jpg) left no-repeat;
+	}
+.edit_profile{
+	background:url(../Content/images/edit-profile.jpg) left no-repeat;	
+	}	
+.change_password{
+	background:url(../Content/images/change-password.jpg) left no-repeat;
+	}		
+.resume_store{
+	background:url(../Content/images/resume-store.jpg) left no-repeat;	
+	}	
+.resume_basket{
+	background:url(../Content/images/resume-basker.jpg) left no-repeat;	
+	}		
+.search_job{
+	background:url(../Content/images/search-job.jpg) left no-repeat;
+	}
+.search_jobseeker{
+	background:url(../Content/images/search-jobseeker.jpg) left no-repeat;
+	}		
+				
+.scrollCycle{
+	width:235px; margin-left:40px; margin-bottom:10px; border-bottom:1px solid #ccc; padding-bottom:10px; height:80px; 
+	}
+
+	
